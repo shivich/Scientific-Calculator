@@ -23,7 +23,7 @@
         <div class="col-12 offset-md-3 col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <input id="calci-display" readonly class="form-control form-control-lg" type="text"
+                    <input id="calci-display" readonly class="form-control form-control-lg text-end" type="text"
                         aria-label=".form-control-lg example">
 
                     <div class="row gx-1">
@@ -113,12 +113,12 @@
 
                         <div class="col-3">
                             <button type="button" class="btn btn-light w-100 mt-3 border">
-                                3
+                                3i
                             </button>
                         </div>
 
                         <div class="col-3">
-                           <button type="button" class="btn btn-light w-100 mt-3 border">
+                            <button type="button" class="btn btn-light w-100 mt-3 border">
                                 -
                             </button>
                         </div>
@@ -156,6 +156,30 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            //JavaScript code goes here
+            console.log('The HTML document has finished loading!');
+            const dispaly = document.getElementById('calci-display');
+            const buttons = document.getElementsByClassName('btn');
+
+            let currentValue = "";
+
+            for (let i = 0; i < buttons.length; i++) {
+                const button = buttons[i];
+                button.addEventListener('click', function(){
+                    const value = button.innerText;
+                    
+                    if(value == "")
+                    
+                    
+                    currentValue += value;
+                    console.log('currentValue:' , currentValue);
+                    dispaly.value = currentValue;
+                })
+            }
+        });
+    </script>
 </body>
 
 </html>
