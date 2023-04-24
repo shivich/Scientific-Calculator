@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const buttons = document.getElementsByClassName('btn');
 
     let currentValue = "";
+    let inverseMode = false;
    
 
     // function to evaluate result, But we must not use eval() function as it is risky
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace("Exp", "Math.exp")
             .replace("x^y", "**")
             .replace("x!" , "factorial")
-            .replace("Inv" , "getInverse");
+            .replace("Inv" , "toggleInverseMode");
 
         //we are storing evaluated value in result variable and converting it into String
         console.log('convertedValue:', convertedValue)
@@ -35,6 +36,52 @@ document.addEventListener('DOMContentLoaded', function () {
         currentValue = result.toString();
         dispaly.value = currentValue;
 
+    }
+
+    function toggleInverseMode() {
+      inverseMode = !inverseMode;
+      
+      const sinButton = document.getElementById('sin-button');
+      const cosButton = document.getElementById('cos-button');
+      const tanButton = document.getElementById('tan-button');
+      
+      if (inverseMode) {
+        sinButton.innerHTML = 'sin<sup>-1</sup>';
+        cosButton.innerHTML = 'cos<sup>-1</sup>';
+        tanButton.innerHTML = 'tan<sup>-1</sup>';
+      } else {
+        sinButton.innerHTML = 'sin';
+        cosButton.innerHTML = 'cos';
+        tanButton.innerHTML = 'tan';
+      }
+    }
+    
+    function handleButtonClick(button) {
+      if (inverseMode) {
+        // Handle inverse sin, cos, and tan functions
+        if (button === 'sin') {
+          // Calculate inverse sine
+          // ...
+        } else if (button === 'cos') {
+          // Calculate inverse cosine
+          // ...
+        } else if (button === 'tan') {
+          // Calculate inverse tangent
+          // ...
+        }
+      } else {
+        // Handle regular sin, cos, and tan functions
+        if (button === 'sin') {
+          // Calculate sine
+          // ...
+        } else if (button === 'cos') {
+          // Calculate cosine
+          // ...
+        } else if (button === 'tan') {
+          // Calculate tangent
+          // ...
+        }
+      }
     }
 
     function factorial(num) {
