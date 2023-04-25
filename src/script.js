@@ -105,15 +105,24 @@ document.addEventListener('DOMContentLoaded', function () {
         return inverse;
       }
 
+      function addOperand(operand) {
+       
+        dispaly.value += operand + "(";
+      }
+
     
     for (let i = 0; i < buttons.length; i++) {
         const button = buttons[i];
         button.addEventListener('click', function () {
             const value = button.innerText;
 
+            
+
 
             try{
+
                  // if AC button is clicked this code will make display empty
+                 
             if (value == "AC") {
                 currentValue = "";
                 dispaly.value = currentValue;
