@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace("×", "*")
             .replace("÷", "/")
             .replace("%", "*0.01")
-            .replace("sin", "Math.sin")
+            
+            .replace("sin(", "Math.sin(")
             .replace("cos", "Math.cos")
             .replace("ln", "Math.log")
             .replace("𝝅", "Math.PI")
@@ -28,7 +29,8 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace("Exp", "Math.exp")
             .replace("x^y", "**")
             .replace("x!" , "factorial")
-            .replace("Inv" , "toggleInverseMode");
+            .replace("Inv" , "toggleInverseMode")
+            .replace("sin-1(" , "Math.asin(") ;
 
         //we are storing evaluated value in result variable and converting it into String
         console.log('convertedValue:', convertedValue)
