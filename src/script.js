@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function () {
             .replace("x^y", "**")
             .replace("x!" , "factorial")
             .replace("Inv" , "toggleInverseMode")
-            .replace("sin-1(" , "Math.asin(") ;
+            .replace("sin-1(" , "Math.asin(") 
+            .replace("cos-1(" , "Math.acos(")
+            .replace("tan-1(" , "Math.atan(");
 
         //we are storing evaluated value in result variable and converting it into String
         console.log('convertedValue:', convertedValue)
