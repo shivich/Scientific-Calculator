@@ -34,10 +34,10 @@
                     <div class="container">
                         <div class="row gx-2">
                             <div class="col d-none d-sm-block ">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">Rad</button> 
+                                <button type="button" class="btn btn-light w-100 mt-3 border" id="radianButton">Rad</button> 
                             </div>
                            <div class="col d-none d-sm-block">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">Deg</button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" id="degreeButton">Deg</button>
                             </div>
                             <div class="col d-none d-sm-block ">
                                 <button type="button" class="btn btn-light w-100 mt-3 border">x!</button>
@@ -162,7 +162,7 @@
                         </div>
                     </div>
 
-                    <div class="container">
+                    <!--<div class="container">
                         <div class="row gx-2">
                             <div class="col d-block d-sm-none">
                                 <button type="button" class="btn btn-light w-100 mt-3 border">Rad</button>
@@ -174,7 +174,7 @@
                                 <button type="button" class="btn btn-light w-100 mt-3 border">x!</button>
                             </div>
                             <div class="col d-block d-sm-none">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">Inv</button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" id="inverse-button" onclick="toggleInverseMode()">Inv</button>
                             </div>
 
                             
@@ -185,7 +185,7 @@
                     <div class="container">
                         <div class="row gx-2">
                             <div class="col d-block d-sm-none">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">sin</button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" id="sin-button" onclick="handleButtonClick('sin')">sin</button>
                             </div>
                             <div class="col d-block d-sm-none">
                                 <button type="button" class="btn btn-light w-100 mt-3 border">ln</button>
@@ -194,7 +194,7 @@
                                 <button type="button" class="btn btn-light w-100 mt-3 border">𝝅</button>
                             </div>
                             <div class="col d-block d-sm-none">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">cos</button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" id="cos-button" onclick="handleButtonClick('cos')">cos</button>
                             </div>
 
                             
@@ -206,16 +206,16 @@
                     <div class="container">
                         <div class="row gx-2">
                             <div class="col d-block d-sm-none">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">log</button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" onclick="addOperand('log')">log</button>
                             </div>
                             <div class="col d-block d-sm-none">
                                 <button type="button" class="btn btn-light w-100 mt-3 border">e</button>
                             </div>
                             <div class="col d-block d-sm-none">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">tan</button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" id="tan-button" onclick="handleButtonClick('tan')">tan</button>
                             </div>
                             <div class="col d-block d-sm-none">
-                                <button type="button" class="btn btn-light w-100 mt-3 border">√ </button>
+                                <button type="button" class="btn btn-light w-100 mt-3 border" onclick="addOperand('√')" >√ </button>
                             </div>
 
                             
@@ -244,7 +244,7 @@
                             
                             
                         </div>
-                    </div>
+                    </div>-->
                     
 
                 </div>
